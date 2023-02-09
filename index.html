@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <script src="js/calculos.js"></script>
 </head>
 <body>
     <div id="ParteSuperior">
@@ -13,84 +14,84 @@
     </div>
     <div id="Formulario">
         <h3>Primeiro Número (A):</h3>
-        <input type="text" id="primeiroNumero">
+        <input type="number" id="primeiroNumero"  onkeypress="return event.charCode >= 48">
         <h3>Segundo Número (B):</h3>
-        <input type="text" id="segundoNumero">
-        <input type="button" id="calcular" value="Calcular" class="botao">
+        <input type="number" id="segundoNumero"  onkeypress="return event.charCode >= 48">
+        <input type="button" id="calcular" value="Calcular" class="botao" onclick="calcular();">
     </div>
     <div id="Resultado">
         <div class="linha">
             <div class="resultadoExibe">
                 <p class="descricao">Soma</p>
-                <p class="resultadoConta" id="resultSoma">Result</p>
+                <p class="resultadoConta" id="resultSoma"></p>
             </div>
             <div class="resultadoExibe">
                 <p class="descricao">Subtração A - B</p>
-                <p class="resultadoConta" id="resultSub1">Result</p>
+                <p class="resultadoConta" id="resultSub1"></p>
             </div>
             <div class="resultadoExibe">
                 <p class="descricao">Subtração B - A</p>
-                <p class="resultadoConta" id="resultSub2">Result</p>
+                <p class="resultadoConta" id="resultSub2"></p>
             </div>
         </div>
 
         <div class="linha">
             <div class="resultadoExibe">
                 <p class="descricao">Multiplicação</p>
-                <p class="resultadoConta" id="resultMult">Result</p>
+                <p class="resultadoConta" id="resultMult"></p>
             </div>
             <div class="resultadoExibe">
                 <p class="descricao">Divisão A / B</p>
-                <p class="resultadoConta" id="resultDiv1">Result</p>
+                <p class="resultadoConta" id="resultDiv1"></p>
             </div>
             <div class="resultadoExibe">
                 <p class="descricao">Divisão B / A</p>
-                <p class="resultadoConta" id="resultDiv2">Result</p>
+                <p class="resultadoConta" id="resultDiv2"></p>
             </div>
         </div>
 
         <div class="linha">
             <div class="resultadoExibe">
                 <p class="descricao">Potência de A na base B</p>
-                <p class="resultadoConta" id="resultPow1">Result</p>
+                <p class="resultadoConta" id="resultPow1"></p>
             </div>
             <div class="resultadoExibe">
                 <p class="descricao">Potência de B na base A</p>
-                <p class="resultadoConta" id="resultPow2">Result</p>
+                <p class="resultadoConta" id="resultPow2"></p>
             </div>
             <div class="resultadoExibe">
                 <p class="descricao">Raiz quadrada de A</p>
-                <p class="resultadoConta" id="resultRaiz1">Result</p>
+                <p class="resultadoConta" id="resultRaiz1"></p>
             </div>
         </div>
 
         <div class="linha">
             <div class="resultadoExibe">
                 <p class="descricao">Raiz quadrada de B</p>
-                <p class="resultadoConta" id="resultRaiz2">Result</p>
+                <p class="resultadoConta" id="resultRaiz2"></p>
             </div>
             <div class="resultadoExibe">
                 <p class="descricao">Fatorial de A</p>
-                <p class="resultadoConta" id="resultFat1">Result</p>
+                <p class="resultadoConta" id="resultFat1"></p>
             </div>
             <div class="resultadoExibe">
                 <p class="descricao">Fatorial de B</p>
-                <p class="resultadoConta" id="resultFat2">Result</p>
+                <p class="resultadoConta" id="resultFat2"></p>
             </div>
         </div>
 
         <div class="linha">
             <div class="resultadoExibe">
                 <p class="descricao">Porcentagem de A em Relação a B</p>
-                <p class="resultadoConta" id="resultPorc1">Result</p>
+                <p class="resultadoConta" id="resultPorc1"></p>
             </div>
             <div class="resultadoExibe">
                 <p class="descricao">Porcentagem de B em Relação a A</p>
-                <p class="resultadoConta" id="resultPorc2">Result</p>
+                <p class="resultadoConta" id="resultPorc2"></p>
             </div>
             <div class="resultadoExibe">
                 <p class="descricao">Média</p>
-                <p class="resultadoConta" id="resultMedia">Result</p>
+                <p class="resultadoConta" id="resultMedia"></p>
             </div>
         </div>
     </div>
